@@ -78,10 +78,11 @@ ul {
 .box {
   width: 100%;
   min-height: 100px;
+  border: 1px;
 }
 
 .main-graph-1 {
-  background-color: blue;
+  padding: 0;
 }
 
 .der1-graph-1 {
