@@ -89,14 +89,15 @@ iframe {
 }
 
 #date{
-  font-size: 20px;
-  padding: 0;
-  margin-top: 10px;
-}
-#clock{
   font-size: 40px;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+#clock{
+  font-size: 60px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .der2-graph-1 {
