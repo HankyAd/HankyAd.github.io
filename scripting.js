@@ -14,8 +14,12 @@ function showTime(){
   s = checkTime(s);
   document.getElementById('clock').innerHTML =
   h + ":" + m + ":" + s;
+  var day = today.getDate();
+  var month = today.getMonth() + 1;
+  var year = today.getFullYear();
+  document.getElementById('date').innerHTML = day + "/" + month + "/" + year;
   var t = setTimeout(showTime, 500);
 }
 
 
-window.addEventListener("mouseover", showTime);
+window.addEventListener("load", showTime);
