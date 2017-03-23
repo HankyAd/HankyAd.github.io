@@ -24,14 +24,11 @@ ul {
   margin: 0;
 }
 
-
-/*
- *
- * Common
- *
- */
-
-
+iframe {
+  width: 450px;
+  height: 591px;
+  float: middle;
+}
 
 /*
  *
@@ -82,6 +79,7 @@ ul {
 }
 
 .main-graph-1 {
+  text-align: center;
   padding: 0;
 }
 
