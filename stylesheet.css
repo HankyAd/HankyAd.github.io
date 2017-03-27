@@ -24,11 +24,6 @@ ul {
   margin: 0;
 }
 
-iframe {
-  width: 450px;
-  height: 591px;
-  float: middle;
-}
 
 /*
  *
@@ -97,7 +92,7 @@ iframe {
   font-size: 60px;
   padding: 0;
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .der2-graph-1 {
@@ -115,6 +110,42 @@ iframe {
 .der2-graph-2 {
   background-color: #D00B6E;
 }
+
+
+
+#weather {
+  width: 425px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 150px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
 
 
 /*Media Queries*/

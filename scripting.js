@@ -23,3 +23,24 @@ function showTime(){
 
 
 window.addEventListener("load", showTime);
+
+
+//finding local weather
+
+$(document).ready(function() {
+  $.simpleWeather({
+    woeid: '', //2357536
+    location: 'Portsmouth',
+    unit: 'c',
+    success: function(weather) {
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
