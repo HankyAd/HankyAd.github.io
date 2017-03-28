@@ -37,7 +37,7 @@ $(document).ready(function() {
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-
+      html += '<p>'+weather.title+'</p>'
       $("#weather").html(html);
     },
     error: function(error) {
