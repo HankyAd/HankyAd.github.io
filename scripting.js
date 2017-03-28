@@ -25,7 +25,7 @@ window.addEventListener("load", showTime);
 
 
 function changeYoutube(){
-  var newTwitter = "cemkGgW3NMU";
+  var youtubeLink = "cemkGgW3NMU";
   document.getElementById('youtube').src = "https://www.youtube.com/embed/" + youtubeLink;
 }
 window.addEventListener("load", changeYoutube);
