@@ -25,8 +25,9 @@ window.addEventListener("load", showTime);
 
 
 function changeYoutube(){
+  document.getElementById("youtubeEmbed").remove();
   var youtubeLink = "cemkGgW3NMU";
-  document.getElementById('youtube').src = "https://www.youtube.com/embed/cemkGgW3NMU";
+  document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
 }
 window.addEventListener("load", changeYoutube);
 
