@@ -25,10 +25,17 @@ window.addEventListener("load", showTime);
 
 
 function changeYoutube(){
-  var youtubeLink = "cemkGgW3NMU";
+  var youtubeLink = "y60wDzZt8yg";
   document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
 }
 window.addEventListener("load", changeYoutube);
+
+
+function changeTwitter(){
+  var twitterLink = "SkyNews";
+  document.getElementById('twitter').innerHTML = '<a class="twitter-timeline" id = "tweeter" href="https://twitter.com/' + twitterLink + '" data-height="600"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
+}
+window.addEventListener("load", changeTwitter);
 
 //
 
