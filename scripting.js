@@ -24,11 +24,11 @@ window.addEventListener("load", showTime);
 
 
 
-function changeTwitter(){
-  var newTwitter = "SkyNews";
-  document.getElementById('tweeter').href = "https://twitter.com/" + newTwitter;
+function changeYoutube(){
+  var newTwitter = "cemkGgW3NMU";
+  document.getElementById('youtube').src = "https://www.youtube.com/embed/" + youtubeLink;
 }
-window.addEventListener("load", changeTwitter);
+window.addEventListener("load", changeYoutube);
 
 
 //finding local weather
