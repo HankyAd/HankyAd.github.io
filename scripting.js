@@ -28,9 +28,7 @@ function changeTwitter(){
   var newTwitter = "SkyNews";
   document.getElementById('tweeter').innerHTML = "https://twitter.com/" + newTwitter;
 }
-
-
-window.addEventListener("load", changeTwitter);
+changeTwitter();
 
 
 //finding local weather
