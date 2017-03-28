@@ -31,14 +31,23 @@ function changeYoutube(){
 window.addEventListener("load", changeYoutube);
 
 
-function changeTwitter(){
-  var twitterLink = "SkyNews";
-  $(".twitter").load('<a class="twitter-timeline" href="https://twitter.com/BBCNews" data-height="600"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></scr'+'ipt>');
+function changeTwitch(){
+  var twitchStreamLink = document.getElementById("streamName").value;
+  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>'+
+  '<input type="text" name="firstname" value=""><input type="submit" value="Watch">';
 }
-window.addEventListener("load", changeTwitter);
 
+var twitchButton = document.getElementById("twitchButton")
 
+if(twitchButton){
+  twitchButton.addEventListener("click", changeTwitch);
+}
 
+function loadTwitch(){
+  var twitchStreamLink = "strippin"
+  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+}
+window.addEventListener("load", loadTwitch);
 
 //
 

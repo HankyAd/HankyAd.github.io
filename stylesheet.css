@@ -113,7 +113,10 @@ ul {
 }
 
 .der2-graph-2 {
-
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 
@@ -158,6 +161,15 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.der2-graph-2 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1px;
 }
 
 

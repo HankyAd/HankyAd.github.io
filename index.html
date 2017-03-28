@@ -7,6 +7,7 @@
     <title>My Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
     <script type="text/javascript" src="scripting.js"></script>
@@ -40,8 +41,12 @@
         <div class="box der1-graph-2">
 
         </div>
-        <div class="box der2-graph-2" id = "twitter">
-          
+        <div class="box der2-graph-2" id = "twitch">
+
+        </div>
+        <div>
+          <input type="text" id="streamName" value="">
+          <input type="button" value="Watch" onclick="changeTwitch()" />
         </div>
     </div>
   </div>
