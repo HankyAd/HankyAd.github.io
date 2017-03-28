@@ -1,5 +1,4 @@
 
-
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
@@ -21,8 +20,9 @@ function showTime(){
   var t = setTimeout(showTime, 500);
 }
 
-
 window.addEventListener("load", showTime);
+
+
 
 
 //finding local weather
@@ -36,6 +36,7 @@ $(document).ready(function() {
       html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
 
       $("#weather").html(html);
     },

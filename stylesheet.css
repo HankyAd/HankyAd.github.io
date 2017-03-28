@@ -79,7 +79,6 @@ ul {
 }
 
 .der1-graph-1 {
-  background-color: red;
   text-align: center;
 }
 
@@ -121,8 +120,8 @@ ul {
 }
 
 #weather h2 {
+  padding-top: 40px;
   margin: 0 0 8px;
-  color: #fff;
   font-size: 150px;
   font-weight: 300;
   text-align: center;
@@ -135,11 +134,11 @@ ul {
 }
 
 #weather li {
-  background: #fff;
   background: rgba(255,255,255,0.90);
   padding: 20px;
   display: inline-block;
   border-radius: 5px;
+  font-size: 15px;
 }
 
 #weather .currently {
