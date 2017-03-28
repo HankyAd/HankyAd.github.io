@@ -33,9 +33,12 @@ window.addEventListener("load", changeYoutube);
 
 function changeTwitter(){
   var twitterLink = "SkyNews";
-  document.getElementById('twitter').innerHTML = '<a class="twitter-timeline" href="https://twitter.com/BBCNews" data-height="600"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>';
+  $(".twitter").load('<a class="twitter-timeline" href="https://twitter.com/BBCNews" data-height="600"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></scr'+'ipt>');
 }
 window.addEventListener("load", changeTwitter);
+
+
+
 
 //
 
