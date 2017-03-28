@@ -26,7 +26,7 @@ window.addEventListener("load", showTime);
 
 function changeTwitter(){
   var newTwitter = "SkyNews";
-  document.getElementById('tweeter').innerHTML = "https://twitter.com/" + newTwitter;
+  document.getElementById('tweeter').href = "https://twitter.com/" + newTwitter;
 }
 changeTwitter();
 
