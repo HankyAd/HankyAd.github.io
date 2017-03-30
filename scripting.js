@@ -33,8 +33,7 @@ window.addEventListener("load", changeYoutube);
 
 function changeTwitch(){
   var twitchStreamLink = document.getElementById("streamName").value;
-  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>'+
-  '<input type="text" name="firstname" value=""><input type="submit" value="Watch">';
+  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
 }
 
 var twitchButton = document.getElementById("twitchButton")
@@ -42,6 +41,9 @@ var twitchButton = document.getElementById("twitchButton")
 if(twitchButton){
   twitchButton.addEventListener("click", changeTwitch);
 }
+
+
+//<a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 function loadTwitch(){
   var twitchStreamLink = "strippin"

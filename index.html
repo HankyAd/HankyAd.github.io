@@ -7,6 +7,23 @@
     <title>My Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));
+    </script>
     <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
@@ -38,11 +55,16 @@
       <iframe src="https://calendar.google.com/calendar/embed?src=bdh2pt88p3thqorj78qp2864hk6r2cc3%40import.calendar.google.com&ctz=Europe/London" style="border: 0" frameborder="0" scrolling="no"></iframe>
     </div>
       <div class="container" id="container3">
-        <div class="box der1-graph-2">
+        <div class="box der1-graph-2" id = "twitch">
+
 
         </div>
-        <div class="box der2-graph-2" id = "twitch">
-
+        <div class="box der2-graph-2" id = "twitter">
+          <a class="twitter-timeline"
+          data-width="300"
+          data-height="300"
+          href="https://twitter.com/BBCNews">
+          </a>
         </div>
         <div>
           <input type="text" id="streamName" value="">
