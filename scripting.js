@@ -1,3 +1,17 @@
+"use strict";
+
+var defaultYoutubeLink = "y60wDzZt8yg";
+var defaultTwitchStreamLink = "bobross";
+var defaultWeatherLocation = "Portsmouth";
+
+// youtube suggested links
+// y60wDzZt8yg
+// TUg__D0An6k
+
+function changeYoutube(newYT){
+  jsonObj.youtube = newYT;
+  fs.writeFile('config.json', json, 'utf-8', callback);
+}
 
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -22,32 +36,33 @@ function showTime(){
 
 window.addEventListener("load", showTime);
 
-
-
 function changeYoutube(){
-  var youtubeLink = "y60wDzZt8yg";
-  document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
+  localStorage.youtubeLink = document.getElementById('youtubeInput').value;
+  loadYoutube();
 }
-window.addEventListener("load", changeYoutube);
+
+function loadYoutube(){
+  if(localStorage.youtubeLink != ""){
+    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + localStorage.youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
+  } else {
+    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + defaultYoutubeLink + '" frameborder="0" allowfullscreen></iframe> ';
+  }
+}
+window.addEventListener("load", loadYoutube);
 
 
 function changeTwitch(){
-  var twitchStreamLink = document.getElementById("streamName").value;
-  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+  localStorage.twitchLink = document.getElementById('twitchInput').value;
+  loadTwitch();
 }
 
-var twitchButton = document.getElementById("twitchButton")
-
-if(twitchButton){
-  twitchButton.addEventListener("click", changeTwitch);
-}
-
-
-//<a class="twitter-timeline" href="https://twitter.com/TwitterDev">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 function loadTwitch(){
-  var twitchStreamLink = "strippin"
-  document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + twitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+  if(localStorage.twitchLink != ""){
+    document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + localStorage.twitchLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+  }else{
+    document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' +defaultTwitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+  }
 }
 window.addEventListener("load", loadTwitch);
 
@@ -57,11 +72,10 @@ window.addEventListener("load", loadTwitch);
 
 $(document).ready(function() {
   $.simpleWeather({
-    woeid: '', //2357536
-    location: 'Portsmouth',
+    location:defaultWeatherLocation,
     unit: 'c',
     success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      var html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';

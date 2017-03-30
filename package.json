@@ -4,9 +4,7 @@
   "description": "",
   "main": "scripting.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server",
-    "dashboard": "http-server" 
+    "dashboard": "node server" 
    },
   "author": "",
   "license": "ISC"
