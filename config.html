@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Dashboard</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script type="text/javascript" src="config.js"></script>
+
+  </head>
+  <body>
+
+  <header class="header">
+  <div class="header__inner">
+    <h1 class="header__title">
+      up777621
+    </h1>
+  </div>
+  <a href = "index.html"><h2>Back to Dashboard</h2></a>
+</header>
+<main>
+  <div class = "container">
+    <div class = "instruction-container">
+      <h2>Changing Weather Location</h2>
+      <p>In the box below, please enter a city or town name</p>
+      <p>For instance: Porstmouth</p>
+      <input type="text" id="weatherInput" value="">
+      <input type="button" value="Update" onclick="changeWeather()" />
+    </div>
+  </div>
+  <div class = "container">
+    <div class = "instruction-container">
+      <h2>Changing Youtube stream/video</h2>
+      <p>In the box below, please enter the watch ID of a youtube stream/video</p>
+      <p>To find this ID, go to the stream/video you would like to view, and copy the following from the URL</p>
+      <img src="youtubelinkexample.jpg"></img>
+      <p>For instance: "y60wDzZt8yg" will load the Sky News - Live stream</p>
+      <input type="text" id="youtubeInput" value="">
+      <input type="button" value="Update" onclick="changeYoutube()" />
+    </div>
+  </div>
+  <div class = "container">
+    <div class = "instruction-container">
+      <h2>Changing Twitch Stream</h2>
+      <p>In the box below, please enter the username of a user on twitch to view their stream</p>
+      <p>To find a streamer's username, go to their twitch page and copy only the following from the url</p>
+      <img src="twitchlinkexample.jpg"></img>
+      <p>For instance: "bobross" will load the Bob Ross twitch stream</p>
+      <input type="text" id="twitchInput" value="">
+      <input type="button" value="Update" onclick="changeTwitch()" />
+    </div>
+  </div>
+  <div class = "footer">
+    <p>up777621</p>
+  </div>
+</main>
+
+</body>
+</html>
