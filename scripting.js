@@ -42,7 +42,7 @@ function changeYoutube(){
 }
 
 function loadYoutube(){
-  if(localStorage.youtubeLink != ""){
+  if(localStorage.youtubeLink){
     document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + localStorage.youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
   } else {
     document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + defaultYoutubeLink + '" frameborder="0" allowfullscreen></iframe> ';
@@ -58,10 +58,10 @@ function changeTwitch(){
 
 
 function loadTwitch(){
-  if(localStorage.twitchLink != ""){
+  if(localStorage.twitchLink){
     document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + localStorage.twitchLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
   }else{
-    document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' +defaultTwitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
+    document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + defaultTwitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
   }
 }
 window.addEventListener("load", loadTwitch);
