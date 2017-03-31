@@ -42,7 +42,7 @@ Code is simple, and concise in most cases. Instances like storing links to local
 
 Usability
 
-The website isn't fully configurable. The calendar and the Twitter timeline proved difficult to change. The calendar required an incredibly unique key, that required you to create a new embed link. Twitter, due to the nature of how the embed is called, will not change from the default value given in the <a href> tag put in the body.
+The website isn't fully configurable. The calendar and the Twitter timeline proved difficult to change. The calendar required an incredibly unique key, that required you to create a new embed link. Twitter, due to the nature of how the embed is called, will not change from the default value given in the "a href" tag put in the body
 
 Other than this, i believe that the site is still incredibly usable. With little event driven inputs on the main page, and no menus, the main page is well laid out and easy to navigate. The settings page is very straightforward, with just 3 event driven inputs, and all confirm to the user when the value is taken.
 
