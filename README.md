@@ -1,4 +1,5 @@
 #up777621 webscript3 dashboard
+
 This website is a dashboard for personal use. There are 6 different functions to the webpage when loaded up by the browser. See below for configuration of the page
 
 1. Using simpleweatherjs, I have created my own weather widget, which only uses html tags inserted from javascript. What this will show, is the current temperature in Celsius, The location listed, the weather index - eg. Cloudy, Sunny, Light Showers - I also included wind direction and speed. Finally below everything else in this block, it gives you information based on when this information was last updated. If no information can be retrieved, an error saying "THERE WAS A PROBLEM RETRIEVING THE LATEST WEATHER INFORMATION"
