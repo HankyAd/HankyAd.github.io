@@ -3,8 +3,6 @@ This website is a dashboard for personal use. There are 6 different functions to
 
 1. Using simpleweatherjs, I have created my own weather widget, which only uses html tags inserted from javascript. What this will show, is the current temperature in Celsius, The location listed, the weather index - eg. Cloudy, Sunny, Light Showers - I also included wind direction and speed. Finally below everything else in this block, it gives you information based on when this information was last updated. If no information can be retrieved, an error saying "THERE WAS A PROBLEM RETRIEVING THE LATEST WEATHER INFORMATION"
 
-The weather can be changed in the settings page
-
 2. Using javascript, I created a clock. It is a 24hr clock that also shows today's date in the format dd/mm/yyyy
 
 3. Using javascript, The website will also inject a youtube embed based on local storage, or defaulting to the sky news live stream. Using local storage, the website stores the watch id of the chosen youtube video/stream. For instance, taking the url: "https://www.youtube.com/watch?v=y60wDzZt8yg" you will only need "y60wDzZt8yg" at the end of the link. This would redirect to a video from the channel Vsauce.
