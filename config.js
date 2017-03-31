@@ -1,3 +1,7 @@
+//all three functions perform similar actions
+//all change the localStorage value for their respective links
+//also alerts the user that it has been changed
+
 function changeTwitch(){
   localStorage.twitchLink = document.getElementById('twitchInput').value;
   alert("Twitch Stream changed to: " + localStorage.twitchLink);

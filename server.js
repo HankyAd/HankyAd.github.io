@@ -13,23 +13,25 @@ app.use('/', function(req, res, next) { console.log(new Date(), req.method, req.
 
 app.use('/', express.static('./', { extensions: ['html'] }));
 
+//returns a 404 page
+app.use(function(req, res, next){
+  res.status(404);
 
+  // respond with html page
+  if (req.accepts('html')) {
+    res.render('404', { url: req.url });
+    return;
+  }
 
-// This assumes you've already installed 'jsonfile' via npm
-var jsonfile = require('jsonfile');
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
 
-// routes will go here
-app.get('/', function(req, res) {
-
-  var youtube = req.param('yt');
-  var twitch = req.param('tw');
-  var weather = req.param('we');
-  var timeFormat = req.param('tf')  
-
-  res.send(youtube + ' ' + twitch + ' ' + weather+ ' ' + timeFormat);
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
 });
 
-
-
-
+//runs the website on port 8080
 app.listen(8080);

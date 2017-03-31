@@ -1,23 +1,28 @@
 "use strict";
-
+//this will open sky news
 var defaultYoutubeLink = "y60wDzZt8yg";
+//will open bob ross
 var defaultTwitchStreamLink = "bobross";
+//portsmouth is set as the default location for weather
 var defaultWeatherLocation = "Portsmouth";
 
 // youtube suggested links
 // y60wDzZt8yg
 // TUg__D0An6k
 
-function changeYoutube(newYT){
-  jsonObj.youtube = newYT;
-  fs.writeFile('config.json', json, 'utf-8', callback);
-}
+
+//twitch suggested usernames
+//bobross
+//itmejp
+
 
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
 
+//this function is used to get the current date/time in format hh/mm/ss and dd/mm/yyyy
+//uses Date()
 function showTime(){
   var today = new Date();
   var h = today.getHours();
@@ -34,29 +39,23 @@ function showTime(){
   var t = setTimeout(showTime, 500);
 }
 
+//displays time on page load
 window.addEventListener("load", showTime);
 
-function changeYoutube(){
-  localStorage.youtubeLink = document.getElementById('youtubeInput').value;
-  loadYoutube();
-}
-
+//if there is a localstorage value, load that localstorage value
+//else run default link
 function loadYoutube(){
   if(localStorage.youtubeLink){
-    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + localStorage.youtubeLink + '" frameborder="0" allowfullscreen></iframe> ';
+    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + localStorage.youtubeLink + '"autoplay=1 cc_load_policy=1 frameborder="0" allowfullscreen></iframe> ';
   } else {
-    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + defaultYoutubeLink + '" frameborder="0" allowfullscreen></iframe> ';
+    document.getElementById('youtube').innerHTML = '<iframe src="https://www.youtube.com/embed/' + defaultYoutubeLink + '"autoplay=1 cc_load_policy=1 frameborder="0" allowfullscreen></iframe> ';
   }
 }
+//insert embed on load
 window.addEventListener("load", loadYoutube);
 
-
-function changeTwitch(){
-  localStorage.twitchLink = document.getElementById('twitchInput').value;
-  loadTwitch();
-}
-
-
+//if there is a localstorage value, load that localstorage value
+//else run default link
 function loadTwitch(){
   if(localStorage.twitchLink){
     document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + localStorage.twitchLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
@@ -64,12 +63,11 @@ function loadTwitch(){
     document.getElementById('twitch').innerHTML = '<iframe src="http://player.twitch.tv/?channel=' + defaultTwitchStreamLink + '&muted=true" frameborder="0" scrolling="false" allowfullscreen="true"></iframe>';
   }
 }
+//insert embed on page load
 window.addEventListener("load", loadTwitch);
 
-//
-
-//finding local weather
-
+//If there is a localstorage value, insert weather for that location
+//else load portsmouth
 $(document).ready(function() {
   if(localStorage.weatherLocation){
     $.simpleWeather({

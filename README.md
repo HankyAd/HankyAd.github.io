@@ -1,6 +1,11 @@
 #up777621 webscript3 dashboard
+This website is a dashboard for personal use. Here is my rationale for certain design decisions.
 
-This website is a dashboard for personal use. There are 6 different functions to the webpage when loaded up by the browser. See below for configuration of the page
+1. A different html page was used for the settings and configuration so that the main page could still look clean and sleek.
+2. Local Storage was used rather than serverside storage. Javascript's localStorage is reliable, and works beautifully. This way, the settings will stay indefinitely.
+
+
+There are 6 different functions to the webpage when loaded up by the browser. See below for configuration of the page
 
 1. Using simpleweatherjs, I have created my own weather widget, which only uses html tags inserted from javascript. What this will show, is the current temperature in Celsius, The location listed, the weather index - eg. Cloudy, Sunny, Light Showers - I also included wind direction and speed. Finally below everything else in this block, it gives you information based on when this information was last updated. If no information can be retrieved, an error saying "THERE WAS A PROBLEM RETRIEVING THE LATEST WEATHER INFORMATION"
 
@@ -14,7 +19,7 @@ This website is a dashboard for personal use. There are 6 different functions to
 
 6.  This is an embedded link to the BBC News twitter timeline
 
-##CONFIG PAGE
+#CONFIG PAGE
 
 There are 3 input boxes on this page. The first is weather location.
 
@@ -23,3 +28,24 @@ There are 3 input boxes on this page. The first is weather location.
 2. Input the username of a streamer on twitch. This value is stored using local storage, and will load the new streamer when going back to the main page
 
 3. Input a watch ID of the desired youtube link. This is also stored using local storage, and will load the correct video when returning to the main page.
+
+
+#Reflection
+Functionality
+
+The website works as intended. It's responsive, the page loads correctly. All the dashboard items all load the correct way.
+
+Maintainability
+Code is simple, and concise in most cases. Instances like storing links to localStorage take up very few lines of code, and are incredibly easy to understand. The CSS is less comprehensive, with more repeated code than i would like. However, The website maintains responsive on all devices.
+
+Usability
+The website isn't fully configurable. The calendar and the Twitter timeline proved difficult to change. The calendar required an incredibly unique key, that required you to create a new embed link. Twitter, due to the nature of how the embed is called, will not change from the default value given in the <a href> tag put in the body.
+
+Other than this, i believe that the site is still incredibly usable. With little event driven inputs on the main page, and no menus, the main page is well laid out and easy to navigate.
+
+The settings page is very straightforward, with just 3 event driven inputs, and all confirm to the user when the value is taken.
+
+Accessibility
+The main page is very accessible. Clear white background, with clear black text makes it easier to read. It could be said that on a portrait mobile screen, the Calendar can be less clear and more difficult to read, however.
+
+The settings page includes very clear instructions on how to configure the home page, providing images for the youtube and twitch links.
